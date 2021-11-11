@@ -1,4 +1,4 @@
-
+// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
@@ -12,12 +12,12 @@ int main() {
     printf("Enter third number: ");
     scanf("%i", &c);
     
-    if (a>b && a>c) {
-        printf("First number is largest.");
-    } else if (b>a && b>c) {
-        printf("Second number is largest.");
-    } else if (c>a && c>b) {
-        printf("Third number is the largest.");
+    if (a>=b && a>=c) {
+        printf("%d is largest.", a);
+    } else if (b>=a && b>=c) {
+        printf("%d is largest.", b);
+    } else if (c>=a && c>=b) {
+        printf("%d is the largest.", c);
     } 
     
     return 0;
