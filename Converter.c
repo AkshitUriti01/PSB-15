@@ -10,8 +10,8 @@
 int main() {
     printf("\ninput = 1 >>converting time - hours to minutes and seconds");
     printf("\ninput = 2 >>converting distance - km to m");
-    printf("\ninput = 3 >>finding area of any shape");
-    printf("\ninput = 4 >>finding volume of any shape");
+    printf("\ninput = 3 >>finding area of square");
+    printf("\ninput = 4 >>finding volume of cuboid");
     printf("\ninput = 5 >>converting temperature - F to C and C to F ");
 
     int input;
@@ -50,14 +50,18 @@ int main() {
         } else if(input == 3) {
             printf("\n--Finding area of a sqaure--");
             //area of sqare = side * side
-            float side, area;
-            area = side * side;
+           
+            float s, area;
+            printf("\nEnter length of side of square: ");
+            scanf("%f", &s);
+            area = s*s;
 
             printf("Area of square = %.2f", area);
+            
         } else if(input == 4) {
             printf("\n--Finding volume of a cuboid--");
-            float l,b,h;
-
+            
+            float l,b,h,v;
             printf("\nEnter length of cuboid: ");
             scanf("%f", &l);
 
@@ -66,21 +70,25 @@ int main() {
 
             printf("\nEnter height of cuboid: ");
             scanf("%f", &h);
+            
+            v = l*b*h;
+            printf("\n\tVolume of cuboid = %.2f", v);
+            
         } else if (input == 5) {
             printf("\n--Conversion of temperature--");
             // F = (C*1.8)+32
             // C = (F-32)/1.8
 
             float f,c;
-            printf("Enter temperature in celcius: ");
+            printf("\nEnter temperature in celcius: ");
             scanf("%f", &c);
 
             f = (c*1.8)+32;
-            printf("Temperature in farenheit = %.2f", f);
+            printf("\nTemperature in farenheit = %.2f", f);
         }
         
     } else {
-        printf("Enter valid input number!!");
+        printf("\nEnter valid input number!!");
     }
     
 
